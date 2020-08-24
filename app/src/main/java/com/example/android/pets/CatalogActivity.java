@@ -22,6 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -44,6 +45,8 @@ public class CatalogActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        AppDatabase db = Room.databaseBuilder(getApplicationContext(),AppDatabase.class,"pets").build();
     }
 
     @Override
